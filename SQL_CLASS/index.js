@@ -1,5 +1,6 @@
 const { faker } = require('@faker-js/faker');
 const mysql = require('mysql2');
+require("dotenv").config();
 
 const express= require("express");
 const app= express();
@@ -13,10 +14,10 @@ app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "/views"));
 
 const connection = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  database: 'delta_app',
-  password: '3july2004'
+    host: process.env.DB_HOST,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_NAME,
 });
 
 //Inserting new data into the table
