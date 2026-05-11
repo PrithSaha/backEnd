@@ -4,13 +4,13 @@ import { useState } from 'react';
 
 export default function WeatherApp(){
     const [weatherInfo,setWeatherInfo]=useState({
-        city:"BabyPink",
-        feelsLike:99 ,
-        humidity:95 ,
-        temp: 99 ,
-        tempMax: 99,
-        tempMin:99 ,
-        weather:"pinkish",
+        city:"delhi",
+        feelsLike: 34.54,
+        humidity: 43,
+        temp: 33.05 ,
+        tempMax: 33.05,
+        tempMin: 33.05,
+        weather:"haze",
     });
 
     let updateInfo = (newInfo) =>{
